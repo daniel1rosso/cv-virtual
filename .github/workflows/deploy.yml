@@ -19,7 +19,7 @@ jobs:
         host: 159.65.126.226
         port: 22
         script: |
-          cd /home/cv-virtual && git pull
+          cd /var/www/html/cv-virtual && git pull
     - name: Send Telegram notification on pipeline completion
       uses: appleboy/telegram-action@master
       with:
