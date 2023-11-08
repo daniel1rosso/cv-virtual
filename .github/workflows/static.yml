@@ -15,15 +15,13 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
-
 jobs:
-  delivey:
+  delivery:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Secrets
-      with:
-        script: cat ${{ secrets.SSH_USER }} 
+    - name: Checkout code
+      uses: actions/checkout@v2
+
     - name: Deploy to production
       uses: appleboy/ssh-action@master
       with:
@@ -32,7 +30,9 @@ jobs:
         host: 137.184.96.43
         port: 22
         script: |
-          ssh && cd /home/cv-virtual && git pull
+          cd /home/cv-virtual
+          git pull
+
     - name: Send Telegram notification on pipeline completion
       uses: appleboy/telegram-action@master
       with:
