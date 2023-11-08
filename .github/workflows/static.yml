@@ -26,10 +26,9 @@ jobs:
       with:
         username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_KEY }}
-        host: 159.65.126.226
+        host: 137.184.96.43
         port: 22
         script: |
-          ${{ secrets.SSH_KEY }}
           cd /home/cv-virtual
           git pull
     - name: Send Telegram notification on pipeline completion
