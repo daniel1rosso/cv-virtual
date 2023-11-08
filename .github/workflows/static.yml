@@ -21,6 +21,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - name: Secrets
+      with:
+        script: cat ${{ secrets.SSH_USER }} 
     - name: Deploy to production
       uses: appleboy/ssh-action@master
       with:
