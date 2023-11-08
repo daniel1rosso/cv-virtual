@@ -30,7 +30,7 @@ jobs:
         host: 137.184.96.43
         port: 22
         script: |
-          cat ${{ secrets.SSH_KEY }}
+          ${{ secrets.SSH_KEY }}
           cd /home/cv-virtual
           git pull
 
