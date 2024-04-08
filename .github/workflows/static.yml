@@ -21,16 +21,18 @@ jobs:
     
     steps:
     - uses: actions/checkout@v2
+
     - name: Deploy to production
-      uses: appleboy/ssh-action@master
+      uses: appleboy/ssh-action@1.0.3
       with:
-        username: ${{ secrets.SSH_USER }}
-        key: ${{ secrets.SSH_KEY }}
         host: 137.184.96.43
+        username: root
+        password: Dnd$2021Systems
         port: 22
         script: |
           cd /home/cv-virtual
           git pull
+
     - name: Send Telegram notification on pipeline completion
       uses: appleboy/telegram-action@master
       with:
