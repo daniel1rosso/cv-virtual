@@ -25,10 +25,10 @@ jobs:
     - name: Deploy to production
       uses: appleboy/ssh-action@v1.0.3
       with:
-        host: 137.184.96.43
-        username: root
-        password: Dnd$2021Systems
-        port: 22
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USERNAME }}
+        password: ${{ secrets.SSH_PASSWORD }}
+        port: ${{ secrets.SSH_PORT }}
         script: |
           cd /home/cv-virtual
           git pull
