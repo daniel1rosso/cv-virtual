@@ -27,7 +27,7 @@ jobs:
       with:
         host: 137.184.96.43
         username: root
-        key: Dnd$2021Systems
+        password: Dnd$2021Systems
         port: 22
         script: |
           cd /home/cv-virtual
