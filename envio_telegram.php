@@ -14,8 +14,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mensaje_telegram .= "Otro Medio de Comunicación: $otroMedio";
 
     // Enviar el mensaje a través de la API de Telegram
-    $telegram_bot_token = '6829407257:AAEb2VfsH_1AlZQkPQlpOVcDOgYHN5oI_BA';
-    $chat_id = '6829407257';
+    $telegram_bot_token = '6256198041:AAGrQsJDQ2vvSckyhkP1p1J7i8VJmfC_ebU';
+    $chat_id = '1238026457';
     $url = "https://api.telegram.org/bot$telegram_bot_token/sendMessage";
     $data = array('chat_id' => $chat_id, 'text' => $mensaje_telegram);
     $options = array(
