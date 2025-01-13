@@ -11431,3 +11431,14 @@ section.resume-section .resume-section-content {
     padding-bottom: 5rem;
   }
 }
+
+.certification-item {
+  display: flex;
+  align-items: center; /* Centra verticalmente el título y la imagen */
+  gap: 15px; /* Espacio entre el título y la imagen */
+}
+
+.certification-item img {
+  max-width: 150px;
+  max-height: 150px;
+}
